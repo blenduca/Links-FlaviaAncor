@@ -50,7 +50,7 @@ export default function App() {
 
         {/* Banner 1: Ancor Academy */}
         <a
-          href="#"
+          href="https://ancoracademy.ancorcarreira.com.br/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -61,7 +61,7 @@ export default function App() {
 
         {/* Banner 2: Diagnóstico Ancor */}
         <a
-          href="#"
+          href="https://diagnostico.ancorcarreira.com.br/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -74,7 +74,7 @@ export default function App() {
 
         {/* Banner 3: Curso A Primeira Segunda-Feira */}
         <a
-          href="#"
+          href="https://ocurso.ancorcarreira.com.br/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -86,7 +86,7 @@ export default function App() {
 
         {/* Banner 4: Livro A Primeira Segunda-Feira */}
         <a
-          href="#"
+          href="https://www.aprimeirasegundafeira.com.br/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -97,7 +97,7 @@ export default function App() {
 
         {/* Banner 5: Palestras e Programas In Company */}
         <a
-          href="#"
+          href="mailto:contato@ancorconsultoria.com.br"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -109,7 +109,7 @@ export default function App() {
 
         {/* Banner 6: Workshop Do Topo ao Próximo Ciclo */}
         <a
-          href="#"
+          href="https://workshop.ancorcarreira.com.br/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -121,7 +121,7 @@ export default function App() {
 
         {/* Banner 7: Flavia no LinkedIn */}
         <a
-          href="#"
+          href="https://www.linkedin.com/in/flavia-perez/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
@@ -132,7 +132,7 @@ export default function App() {
 
         {/* Banner 8: Contato via WhatsApp */}
         <a
-          href="#"
+          href="http://wa.me/5511999051956"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           onClick={(e) => e.preventDefault()}
         >
