@@ -141,7 +141,7 @@ export default function App() {
           rel="noopener noreferrer"
         >
           <div className="relative w-full" style={{ paddingBottom: '37.12%' }}>
-            <img src={imgLinkedIn} alt="Flavia no LinkedIn" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Instagram%20Flavia-usL1BtApChLNzHpOmaZMTBgRuHZUjW.png" alt="Flavia no LinkedIn" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
           </div>
         </a>
 
