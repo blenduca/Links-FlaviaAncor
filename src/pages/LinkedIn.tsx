@@ -29,13 +29,10 @@ import imgWorkshop1 from "figma:asset/f6d349d24dd0e898a4052f62059589f943602f9c.p
 import imgCurso from "figma:asset/5b2e4b3c5e0262156e92b83553c429a3951e9941.png";
 import imgCurso1 from "figma:asset/a1304d1d2901752557556b3cb7182096fac86349.png";
 
-// Imagem LinkedIn
-import imgLinkedIn from "figma:asset/8eae791ff7c5d05a2a295075eefe0fa85520f052.png";
-
 // Imagem WhatsApp
 import imgWhatsApp from "figma:asset/dacd62e70baedfa6f64654fd61d1ad7449498872.png";
 
-export default function App() {
+export default function LinkedIn() {
   return (
     <div className="min-h-screen bg-[#F1F1F1] flex flex-col items-center pt-12 pb-24 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[672px] flex flex-col gap-8">
@@ -133,15 +130,15 @@ export default function App() {
           </div>
         </a>
 
-        {/* 7. Banner: Flavia no LinkedIn */}
+        {/* 7. Banner: Flavia no Instagram */}
         <a
-          href="https://www.linkedin.com/in/flavia-perez/"
+          href="https://www.instagram.com/flaviaperez/"
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div className="relative w-full" style={{ paddingBottom: '37.12%' }}>
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Instagram%20Flavia-usL1BtApChLNzHpOmaZMTBgRuHZUjW.png" alt="Flavia no LinkedIn" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Instagram%20Flavia%20%281%29-cjopeSQElHyWfvQVb5oUimIImIKGDR.png" alt="Flavia no Instagram" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
           </div>
         </a>
 
