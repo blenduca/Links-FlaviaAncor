@@ -138,7 +138,7 @@ export default function LinkedIn() {
           rel="noopener noreferrer"
         >
           <div className="relative w-full" style={{ paddingBottom: '37.12%' }}>
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Instagram%20Flavia%20%281%29-cjopeSQElHyWfvQVb5oUimIImIKGDR.png" alt="Flavia no Instagram" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Instagram%20Flavia%20%282%29-Q3asL4451yENrHvZ73S7eA3MSs4kEy.png" alt="Flavia no Instagram" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
           </div>
         </a>
 
