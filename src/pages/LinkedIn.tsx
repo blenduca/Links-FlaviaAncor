@@ -46,7 +46,8 @@ export default function LinkedIn() {
           <div className="flex flex-col gap-3">
             <h1 className="text-[30px] tracking-[0.4px] text-[#101828] text-center">Flavia Perez</h1>
             <p className="text-[#4a5565] text-[14px] leading-[22.75px] tracking-[-0.15px] text-center max-w-[479px] mx-auto">
-              Gestão de Carreira e Pós-Carreira para Executivos | Especialista em Longevidade Profissional | Colunista &amp; Palestrante | Cocriadora do Método ANCOR | Sócia-fundadora da Ancor Consultoria
+              Longevidade Profissional para Executivos | Gestão Estratégica de Ciclos de Carreira | Autora best-seller, Colunista &
+              Palestrante | Cocriadora do Método ANCOR | Sócia-fundadora da Ancor Consultoria
             </p>
           </div>
         </div>
