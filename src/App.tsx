@@ -3,7 +3,7 @@ import React from 'react';
 // Profile photo
 import imgFlaviaPerez from "figma:asset/e56def0fdc65116ef0006dcdd4755b8fb2d63406.png";
 
-// Utilitário: repassa os UTMs da URL atual para um link de destino
+// Utilitário: repassa os UTMs da URL atual para um link de destio
 function appendUtms(destinationUrl: string): string {
   // Só processa URLs HTTP/HTTPS (ignora mailto:, tel:, etc.)
   if (!destinationUrl.startsWith('http')) return destinationUrl;
