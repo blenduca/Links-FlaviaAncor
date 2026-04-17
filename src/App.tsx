@@ -3,6 +3,27 @@ import React from 'react';
 // Profile photo
 import imgFlaviaPerez from "figma:asset/e56def0fdc65116ef0006dcdd4755b8fb2d63406.png";
 
+// Utilitário: repassa os UTMs da URL atual para um link de destino
+function appendUtms(destinationUrl: string): string {
+  // Só processa URLs HTTP/HTTPS (ignora mailto:, tel:, etc.)
+  if (!destinationUrl.startsWith('http')) return destinationUrl;
+
+  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  const currentParams = new URLSearchParams(window.location.search);
+  const destUrl = new URL(destinationUrl);
+
+  let hasUtm = false;
+  utmKeys.forEach((key) => {
+    const value = currentParams.get(key);
+    if (value) {
+      destUrl.searchParams.set(key, value);
+      hasUtm = true;
+    }
+  });
+
+  return hasUtm ? destUrl.toString() : destinationUrl;
+}
+
 // --- Correção da associação das imagens ---
 // As variáveis originais estavam trocadas. Agora apontam para o visual correto:
 
@@ -57,7 +78,7 @@ export default function App() {
 
         {/* 1. Banner: Ancor Academy */}
         <a
-          href="https://ancoracademy.ancorcarreira.com.br/"
+          href={appendUtms("https://ancoracademy.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -69,7 +90,7 @@ export default function App() {
 
         {/* 2. Banner: Diagnóstico Ancor */}
         <a
-          href="https://diagnostico.ancorcarreira.com.br/"
+          href={appendUtms("https://diagnostico.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -82,7 +103,7 @@ export default function App() {
 
         {/* 3. Banner: Curso A Primeira Segunda-Feira */}
         <a
-          href="https://ocurso.ancorcarreira.com.br/"
+          href={appendUtms("https://ocurso.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -119,7 +140,7 @@ export default function App() {
 
         {/* 7. Banner: Flavia no LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/flavia-perez/"
+          href={appendUtms("https://www.linkedin.com/in/flavia-perez/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -131,7 +152,7 @@ export default function App() {
 
         {/* 8. Banner: Contato via WhatsApp */}
         <a
-          href="http://wa.me/5511999051956"
+          href={appendUtms("http://wa.me/5511999051956")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
