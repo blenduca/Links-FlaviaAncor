@@ -3,25 +3,28 @@ import React from 'react';
 // Profile photo
 import imgFlaviaPerez from "figma:asset/e56def0fdc65116ef0006dcdd4755b8fb2d63406.png";
 
-// Utilitário: repassa os UTMs da URL atual para um link de destio
+// Utilitário: repassa os UTMs da URL atual para um link de destino
+// utm_campaign é sempre definido como "links_flavia" para esta página
 function appendUtms(destinationUrl: string): string {
   // Só processa URLs HTTP/HTTPS (ignora mailto:, tel:, etc.)
   if (!destinationUrl.startsWith('http')) return destinationUrl;
 
-  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  const utmKeys = ['utm_source', 'utm_medium', 'utm_content', 'utm_term'];
   const currentParams = new URLSearchParams(window.location.search);
   const destUrl = new URL(destinationUrl);
 
-  let hasUtm = false;
+  // Repassa os demais UTMs vindos da URL (ex: do Instagram)
   utmKeys.forEach((key) => {
     const value = currentParams.get(key);
     if (value) {
       destUrl.searchParams.set(key, value);
-      hasUtm = true;
     }
   });
 
-  return hasUtm ? destUrl.toString() : destinationUrl;
+  // Sempre define utm_campaign como links_flavia
+  destUrl.searchParams.set('utm_campaign', 'links_flavia');
+
+  return destUrl.toString();
 }
 
 // --- Correção da associação das imagens ---
