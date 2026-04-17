@@ -28,6 +28,31 @@ import imgCurso1 from "figma:asset/a1304d1d2901752557556b3cb7182096fac86349.png"
 // Imagem WhatsApp
 import imgWhatsApp from "figma:asset/dacd62e70baedfa6f64654fd61d1ad7449498872.png";
 
+// Utilitário: repassa os UTMs especificados para um link de destino
+function appendUtms(destinationUrl: string): string {
+  // Só processa URLs HTTP/HTTPS (ignora mailto:, etc.)
+  if (!destinationUrl.startsWith('http')) return destinationUrl;
+
+  const destUrl = new URL(destinationUrl);
+  const currentParams = new URLSearchParams(window.location.search);
+
+  // Repassa utm_content e utm_term se existirem na URL atual
+  const urlKeys = ['utm_content', 'utm_term'];
+  urlKeys.forEach((key) => {
+    const value = currentParams.get(key);
+    if (value) {
+      destUrl.searchParams.set(key, value);
+    }
+  });
+
+  // Define os UTMs Fixos para a página do LinkedIn
+  destUrl.searchParams.set('utm_source', 'linkedin');
+  destUrl.searchParams.set('utm_medium', 'social');
+  destUrl.searchParams.set('utm_campaign', 'links_flavia');
+
+  return destUrl.toString();
+}
+
 export default function LinkedIn() {
   return (
     <div className="min-h-screen bg-[#F1F1F1] flex flex-col items-center pt-12 pb-24 px-4 sm:px-6 lg:px-8">
@@ -54,7 +79,7 @@ export default function LinkedIn() {
 
         {/* 1. Banner: Ancor Academy */}
         <a
-          href="https://ancoracademy.ancorcarreira.com.br/"
+          href={appendUtms("https://ancoracademy.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -66,7 +91,7 @@ export default function LinkedIn() {
 
         {/* 2. Banner: Diagnóstico Ancor */}
         <a
-          href="https://diagnostico.ancorcarreira.com.br/"
+          href={appendUtms("https://diagnostico.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -79,7 +104,7 @@ export default function LinkedIn() {
 
         {/* 3. Banner: Curso A Primeira Segunda-Feira */}
         <a
-          href="https://ocurso.ancorcarreira.com.br/"
+          href={appendUtms("https://ocurso.ancorcarreira.com.br/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -116,7 +141,7 @@ export default function LinkedIn() {
 
         {/* 7. Banner: Flavia no Instagram */}
         <a
-          href="https://www.instagram.com/flaviaperez/"
+          href={appendUtms("https://www.instagram.com/flaviaperez/")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
@@ -128,7 +153,7 @@ export default function LinkedIn() {
 
         {/* 8. Banner: Contato via WhatsApp */}
         <a
-          href="http://wa.me/5511999051956"
+          href={appendUtms("http://wa.me/5511999051956")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
           target="_blank"
           rel="noopener noreferrer"
