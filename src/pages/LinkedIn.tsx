@@ -144,8 +144,10 @@ export default function LinkedIn() {
 
         {/* 5. Banner: Palestras e Programas In Company */}
         <a
-          href="mailto:contato@ancorconsultoria.com.br"
+          href={appendUtms("http://wa.me/5511999051956")}
           className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="relative w-full" style={{ paddingBottom: '37.12%' }}>
             <img src={imgPalestras} alt="" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
