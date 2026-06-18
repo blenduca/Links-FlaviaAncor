@@ -3,8 +3,7 @@ import React from 'react';
 // Profile photo
 import imgFlaviaPerez from "figma:asset/e56def0fdc65116ef0006dcdd4755b8fb2d63406.png";
 
-// Imagem Workshop
-import imgWorkshop from "./assets/Workshop.png";
+
 
 // Utilitário: repassa os UTMs da URL atual para um link de destino
 // utm_campaign é sempre definido como "links_flavia" para esta página
@@ -82,17 +81,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* 1. Banner: Workshop */}
-        <a
-          href={appendUtms("https://workshop.ancorcarreira.com.br/")}
-          className="block w-full rounded-[32px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-transform hover:scale-[1.02] hover:shadow-md overflow-hidden"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="relative w-full" style={{ paddingBottom: '37.12%' }}>
-            <img src={imgWorkshop} alt="Workshop" className="absolute inset-0 w-full h-full object-cover rounded-[32px]" />
-          </div>
-        </a>
+
 
         {/* 2. Banner: Ancor Academy */}
         <a
